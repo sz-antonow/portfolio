@@ -1,8 +1,11 @@
 import { Dispatch } from 'redux';
 
-import { VersionApi } from 'common/src/module/Version/api/VersionApi';
-import { VersionConst } from 'common/src/module/Version/store/VersionConst';
-import { AsyncActionCreator } from 'common/src/store/async';
+import {VersionConst} from "./VersionConst";
+import {VersionApi} from "../api/VersionApi";
+
+// import { VersionApi } from 'src/module/Version/api/VersionApi';
+// import { VersionConst } from 'src/module/Version/store/VersionConst';
+// import { AsyncActionCreator } from 'src/store/async';
 
 export namespace VersionAction {
   export const fetchVersionActions: AsyncActionCreator<any> = AsyncActionCreator.init(VersionConst.FETCH_VERSION);

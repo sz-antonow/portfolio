@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
+import {Data, State, VersionState} from "./VersionState";
+import {AsyncSelector} from "../../async";
+import {VersionModel} from "../model/VersionModel";
 
-import { VersionModel } from 'common/src/module/Version/model/VersionModel';
-import { Data, State, VersionState } from 'common/src/module/Version/store/VersionState';
-import { AsyncSelector } from 'common/src/store/async';
 
 export namespace VersionSelector {
   export function selectDomain<T extends State>(state: T): VersionState {

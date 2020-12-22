@@ -1,5 +1,5 @@
-import { platformApiClient } from 'common/src/api/platformApiClient';
-import { VersionDto } from 'common/src/module/Version/api/VersionDto';
+import {VersionMapper} from "./VersionMapper";
+import {VersionDto} from "./VersionDto";
 
 export namespace VersionApi {
   const API_URL = '/Versions';
@@ -8,7 +8,7 @@ export namespace VersionApi {
     const URL = '/current';
     return platformApiClient
       .get(`${API_URL}${URL}`)
-      .then((response) => response.data)
+      .then((response) => VersionMapper.mapFromVersionDto(response.data))
       .catch((error) => {
         throw error;
       });

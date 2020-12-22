@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsyncAction should create pending action 1`] = `
+Object {
+  "meta": Object {
+    "asyncStatus": "PENDING",
+    "type": "TYPE",
+  },
+  "payload": null,
+  "type": "TYPE_PENDING",
+}
+`;
+
+exports[`AsyncAction should create rejected action 1`] = `
+Object {
+  "error": true,
+  "meta": Object {
+    "asyncStatus": "REJECTED",
+    "type": "TYPE",
+  },
+  "payload": [Error: Error message],
+  "type": "TYPE_REJECTED",
+}
+`;
+
+exports[`AsyncAction should create resolved action 1`] = `
+Object {
+  "meta": Object {
+    "asyncStatus": "RESOLVED",
+    "type": "TYPE",
+  },
+  "payload": Array [
+    "foo",
+  ],
+  "type": "TYPE_RESOLVED",
+}
+`;
+
+exports[`AsyncAction should create type with current async status 1`] = `"TYPE_PENDING"`;
+
+exports[`AsyncAction should create type with current async status 2`] = `"TYPE_RESOLVED"`;
+
+exports[`AsyncAction should create type with current async status 3`] = `"TYPE_REJECTED"`;

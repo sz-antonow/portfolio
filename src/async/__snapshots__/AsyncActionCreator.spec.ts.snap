@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsyncActionCreator should create async actions creators 1`] = `
+Object {
+  "pending": [Function],
+  "rejected": [Function],
+  "resolved": [Function],
+}
+`;
